@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Ingress
+metadata:
+  name: djangoapp-ingress
+spec:
+  rules:
+  - host: myapp.com
+    http:
+      paths:
+      - backend:
+          serviceName: djangoapp-service
+          servicePort: 8000
